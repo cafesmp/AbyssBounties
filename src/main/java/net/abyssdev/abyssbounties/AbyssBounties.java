@@ -11,6 +11,7 @@ import net.abyssdev.abyssbounties.command.sub.RemoveCommand;
 import net.abyssdev.abyssbounties.economy.BountyEconomy;
 import net.abyssdev.abyssbounties.economy.registry.BountyEconomyRegistry;
 import net.abyssdev.abyssbounties.listeners.DeathListener;
+import net.abyssdev.abyssbounties.listeners.JoinListener;
 import net.abyssdev.abyssbounties.menu.BountyMenu;
 import net.abyssdev.abyssbounties.utils.BountyUtils;
 import net.abyssdev.abysslib.command.Command;
@@ -155,6 +156,7 @@ public final class AbyssBounties extends AbyssPlugin {
                 new RemoveCommand(this));
 
         new DeathListener(this);
+        new JoinListener(this);
     }
 
     @Override
