@@ -7,6 +7,7 @@ import net.abyssdev.abysslib.command.context.CommandContext;
 import net.abyssdev.abysslib.nbt.NBTUtils;
 import net.abyssdev.abysslib.placeholder.PlaceholderReplacer;
 import net.abyssdev.abysslib.utils.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -83,7 +84,8 @@ public final class ClaimCommand extends SubCommand {
                 replacer.addPlaceholder("%" + name + "%", Utils.format(amount));
             }
 
-            this.plugin.getMessageCache().sendMessage(player, "messages.sold-head", replacer);
+            this.plugin.getMessageCache().sendMessage(target, "messages.sold-head", replacer);
+            target.getInventory().remove(item);
         }
 
     }

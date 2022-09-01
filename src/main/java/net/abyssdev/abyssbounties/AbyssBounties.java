@@ -6,6 +6,7 @@ import net.abyssdev.abyssbounties.bounty.storage.BountyStorage;
 import net.abyssdev.abyssbounties.command.BountyCommand;
 import net.abyssdev.abyssbounties.command.sub.AddCommand;
 import net.abyssdev.abyssbounties.command.sub.ClaimCommand;
+import net.abyssdev.abyssbounties.command.sub.RemoveCommand;
 import net.abyssdev.abyssbounties.economy.BountyEconomy;
 import net.abyssdev.abyssbounties.economy.registry.BountyEconomyRegistry;
 import net.abyssdev.abyssbounties.listeners.DeathListener;
@@ -31,7 +32,6 @@ public final class AbyssBounties extends AbyssPlugin {
     private static AbyssBounties instance;
 
     private final Storage<UUID, Bounty> bountyStorage = new BountyStorage(this);
-    private final Registry<String, BountyEconomy> economyRegistry = new BountyEconomyRegistry(this);
 
     private final Command<Player> bountyCommand = new BountyCommand(this);
     private final BountyMenu bountyMenu = new BountyMenu(this);
@@ -39,16 +39,22 @@ public final class AbyssBounties extends AbyssPlugin {
 
     private final FileConfiguration itemConfig = this.getConfig("item");
 
+    private Registry<String, BountyEconomy> economyRegistry;
+
     @Override
     public void onEnable() {
         instance = this;
 
         BountyUtils.load(this);
 
+        this.economyRegistry = new BountyEconomyRegistry(this);
         this.loadMessages(this.messageCache, this.getConfig("lang"));
 
         this.bountyCommand.register();
-        this.bountyCommand.register(new AddCommand(this), new ClaimCommand(this));
+        this.bountyCommand.register(
+                new AddCommand(this),
+                new ClaimCommand(this),
+                new RemoveCommand(this));
 
         new DeathListener(this);
     }

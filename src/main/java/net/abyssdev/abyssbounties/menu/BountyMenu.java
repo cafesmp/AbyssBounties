@@ -10,6 +10,7 @@ import net.abyssdev.abysslib.menu.MenuBuilder;
 import net.abyssdev.abysslib.menu.templates.AbyssMenu;
 import net.abyssdev.abysslib.placeholder.PlaceholderReplacer;
 import net.abyssdev.abysslib.utils.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.eclipse.collections.impl.list.mutable.primitive.IntArrayList;
@@ -44,9 +45,9 @@ public final class BountyMenu extends AbyssMenu {
             this.slots.add(slot);
         }
 
-        this.next = new PageItem(new ItemBuilder(config, "next-page"), config.getInt("next-page"));
-        this.prev = new PageItem(new ItemBuilder(config, "prev-page"), config.getInt("prev-page"));
-        this.current = new PageItem(new ItemBuilder(config, "current-page"), config.getInt("current-page"));
+        this.next = new PageItem(new ItemBuilder(config, "next-page"), config.getInt("next-page.slot"));
+        this.prev = new PageItem(new ItemBuilder(config, "prev-page"), config.getInt("prev-page.slot"));
+        this.current = new PageItem(new ItemBuilder(config, "current-page"), config.getInt("current-page.slot"));
         this.bountyItem = new ItemBuilder(config, "bounty-item");
     }
 
@@ -85,13 +86,17 @@ public final class BountyMenu extends AbyssMenu {
             }
 
             final Bounty bounty = bounties.get(index);
-            final PlaceholderReplacer currencies = new PlaceholderReplacer();
+
+            index++;
+
+            final PlaceholderReplacer placeholders = new PlaceholderReplacer()
+                    .addPlaceholder("%player%", Bukkit.getOfflinePlayer(bounty.getTarget()).getName());
 
             for (final Map.Entry<String, BountyEconomy> entry : this.plugin.getEconomyRegistry().entrySet()) {
-                currencies.addPlaceholder("%" + entry.getKey() + "%", Utils.format(bounty.getRewards().getOrDefault(entry.getKey(), 0.0)));
+                placeholders.addPlaceholder("%" + entry.getKey() + "%", Utils.format(bounty.getRewards().getOrDefault(entry.getKey(), 0.0)));
             }
 
-            builder.setItem(slot, this.bountyItem.parse(currencies));
+            builder.setItem(slot, this.bountyItem.parse(placeholders));
         }
 
         player.openInventory(builder.build());

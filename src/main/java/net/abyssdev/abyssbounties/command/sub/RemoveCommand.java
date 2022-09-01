@@ -21,7 +21,7 @@ import java.util.concurrent.CompletableFuture;
 public final class RemoveCommand extends SubCommand {
 
     private final AbyssBounties plugin;
-    private final Set<String> aliases = Sets.immutable.of("remove").castToSet();
+    private final Set<String> aliases = Sets.immutable.of("remove", "delete").castToSet();
 
     /**
      * Constructs a new RemoveCommand
@@ -89,7 +89,7 @@ public final class RemoveCommand extends SubCommand {
                 this.plugin.getBountyStorage().remove(target.getUniqueId());
 
                 this.plugin.getMessageCache().sendMessage(player, "messages.bounty-removed", new PlaceholderReplacer()
-                        .addPlaceholder("%target%", target.getName()));
+                        .addPlaceholder("%player%", target.getName()));
             });
 
         });
