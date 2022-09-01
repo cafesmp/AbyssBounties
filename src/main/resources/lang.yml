@@ -1,0 +1,122 @@
+messages:
+    "no-permission":
+        sound:
+            enabled: true
+            value: "FIZZ"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&c&lAbyss &8- &cNo permission."
+    "cant-remove":
+        sound:
+            enabled: true
+            value: "FIZZ"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&c&lAbyss &8- &cEither this player has no bounty or you didn't contribute to the bounty!"
+    "bounty-removed":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &bYou have removed your bounty on &3%player%&b."
+    "bounty-added":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &3%setter%&b has just added &3%amount% %currency%&b to &3%victim%&b's bounty."
+    "bounty-created":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &3%setter%&b has just created a bounty with &3%amount% %currency%&b on &3%victim%&b."
+    "sold-head":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &bYou have sold a &3bounty skull&b for:"
+                - "&3&l- &bMoney: &f$%vault%"
+                - "&3&l- &bEXP: &f%experience%"
+    "bounty-dropped":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &3%victim%&b has just been killed by &3%killer%&b and their &3bounty skull&b has dropped!."
+    "player-help":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&3&m---------------------------------------"
+                - " "
+                - "&b&lAbyss&3&lBounties &8&l┃ &bPlayer Help"
+                - "&7&oMade by &f&oRelocation#0001&7&o."
+                - " "
+                - "&7<> = Required"
+                - "&7[] = Optional"
+                - " "
+                - "&3&lCOMMANDS:"
+                - "&3&l» &b/bounty"
+                - "&3&l» &b/bounty add <player> <amount> <currency>"
+                - "&3&l» &b/bounty remove <player>"
+                - " "
+                - "&3&m---------------------------------------"
+    "admin-help":
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&3&m---------------------------------------"
+                - " "
+                - "&b&lAbyss&3&lBounties &8&l┃ &bAdmin Help"
+                - "&7&oMade by &f&oRelocation#0001&7&o."
+                - " "
+                - "&7<> = Required"
+                - "&7[] = Optional"
+                - " "
+                - "&3&lPLAYER COMMANDS:"
+                - "&3&l» &b/bounty"
+                - "&3&l» &b/bounty add <player> <amount> <currency>"
+                - "&3&l» &b/bounty remove <player>"
+                - " "
+                - "&3&lADMIN COMMANDS:"
+                - "&3&l» &b/bounty claim <player> &7(Attach this to an NPC)"
+                - " "
+                - "&3&m---------------------------------------"

@@ -1,0 +1,14 @@
+currencies:
+    "vault":
+        formatted-name: "Money"
+        name-aliases:
+            - "money"
+            - "cash"
+            - "vault"
+            - "dollar"
+    "experience":
+        formatted-name: "Experience"
+        name-aliases:
+            - "exp"
+            - "experience"
+            - "xp"

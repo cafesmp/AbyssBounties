@@ -1,0 +1,39 @@
+title: "&8&lBOUNTIES"
+rows: 4
+head-slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+borders:
+    "light-gray":
+        material: "LIGHT_GRAY_STAINED_GLASS_PANE"
+        name: " "
+        lore: []
+        slots:
+            - "0-26"
+    "gray":
+        material: "GRAY_STAINED_GLASS_PANE"
+        name: " "
+        lore: []
+        slots:
+            - "27-35"
+next-page:
+    material: "LIME_DYE"
+    name: "&aNext Page"
+    lore: []
+    slot: 32
+prev-page:
+    material: "RED_DYE"
+    name: "&cPrevious Page"
+    lore: []
+    slot: 30
+current-page:
+    material: "COMPASS"
+    name: "&eCurrent Page: &f#%page%"
+    lore: []
+    slot: 31
+bounty-item:
+    material: "PLAYER_HEAD"
+    name: "&3&l[&b&l!&3&l] &bBounty: &f%player%"
+    lore:
+        - " "
+        - "&bMoney: &f$%vault%"
+        - "&bExperience: &f%experience%"
+        - " "

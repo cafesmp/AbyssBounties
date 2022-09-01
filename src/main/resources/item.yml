@@ -1,0 +1,8 @@
+material: "PLAYER_HEAD"
+name: "&c%player%'s Decapitated Head"
+lore:
+    - "&7Take this to the huntsman for your reward!"
+    - " "
+    - "%currencies%"
+    - " "
+currency-format: "&4- &c%currency%: &f%amount%"
