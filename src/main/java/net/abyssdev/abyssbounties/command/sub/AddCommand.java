@@ -61,8 +61,8 @@ public final class AddCommand extends SubCommand {
 
         final Bounty bounty;
 
-        if (this.plugin.getBountyStorage().contains(player.getUniqueId())) {
-            bounty = this.plugin.getBountyStorage().get(player.getUniqueId());
+        if (this.plugin.getBountyStorage().contains(target.getUniqueId())) {
+            bounty = this.plugin.getBountyStorage().get(target.getUniqueId());
 
             this.plugin.getMessageCache().getMessage("messages.bounty-added").broadcast(new PlaceholderReplacer()
                     .addPlaceholder("%victim%", target.getName())

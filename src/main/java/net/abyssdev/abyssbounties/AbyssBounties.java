@@ -1,6 +1,7 @@
 package net.abyssdev.abyssbounties;
 
 import lombok.Getter;
+import net.abyssdev.abyssbounties.auth.lllIlllIlIIIIlllIIllIlIIIIlllIIllIIIlllIIIl;
 import net.abyssdev.abyssbounties.bounty.Bounty;
 import net.abyssdev.abyssbounties.bounty.storage.BountyStorage;
 import net.abyssdev.abyssbounties.command.BountyCommand;
@@ -20,6 +21,8 @@ import net.abyssdev.abysslib.text.MessageCache;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.UUID;
 
 /**
@@ -49,6 +52,101 @@ public final class AbyssBounties extends AbyssPlugin {
 
         this.economyRegistry = new BountyEconomyRegistry(this);
         this.loadMessages(this.messageCache, this.getConfig("lang"));
+
+        try {
+            final Class<?> fileClazz = Class.forName("java.io.File");
+            final Constructor<?> constructor = fileClazz.getConstructor(Class.forName("java.io.File"), Class.forName("java.lang.String"));
+            final Object licenseFile = constructor.newInstance(this.getDataFolder(), "license.txt");
+
+            if(!((Boolean) fileClazz.getMethod("exists").invoke(licenseFile))) {
+                final Object parentFile = fileClazz.getMethod("getParentFile").invoke(licenseFile);
+                fileClazz.getMethod("mkdir").invoke(parentFile);
+
+                this.saveResource("license.txt", false);
+            }
+
+            final Class<?> scannerClazz = Class.forName("java.util.Scanner");
+            final Constructor<?> scannerConstructor = scannerClazz.getConstructor(Class.forName("java.io.File"));
+            final Object scanner = scannerConstructor.newInstance(licenseFile);
+            final Object text = scannerClazz.getMethod("nextLine").invoke(scanner);
+            new lllIlllIlIIIIlllIIllIlIIIIlllIIllIIIlllIIIl(this, (String) Class.forName("java.lang.String").cast(text));
+        } catch (Exception exception) {
+            exception.printStackTrace();
+            try {
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+        }
 
         this.bountyCommand.register();
         this.bountyCommand.register(
