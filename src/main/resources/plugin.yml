@@ -1,6 +1,8 @@
 name: AbyssBounties
 version: '${project.version}'
 main: net.abyssdev.abyssbounties.AbyssBounties
-api-version: 1.19
-depend: [ AbyssLib ]
-authors: [ Relocation ]
+api-version: 1.13
+depend:
+    - AbyssLib
+authors:
+    - Relocation
