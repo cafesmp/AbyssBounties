@@ -1,5 +1,5 @@
 name: AbyssBounties
-version: '1.0.0'
+version: '1.0.1'
 main: net.abyssdev.abyssbounties.AbyssBounties
 api-version: 1.13
 depend:
