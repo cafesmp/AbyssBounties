@@ -44,7 +44,7 @@ public final class AddCommand extends SubCommand {
         final Player target = context.asPlayer(0);
         final String currency = context.asString(2);
 
-        if (target == null || !context.isDouble(1) || !this.plugin.getEconomyRegistry().containsKey(currency)) {
+        if (target == null || !context.isDouble(1) || context.asDouble(1) <= 0 || !this.plugin.getEconomyRegistry().containsKey(currency)) {
             this.getInvalid().send(context.getSender());
             return;
         }
