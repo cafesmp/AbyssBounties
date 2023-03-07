@@ -26,5 +26,4 @@ public final class BountyStorage extends JsonStorage<UUID, Bounty> {
     public Bounty constructValue(final UUID key) {
         return new Bounty(key);
     }
-
 }

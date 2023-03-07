@@ -167,5 +167,4 @@ public final class AbyssBounties extends AbyssPlugin {
     public static AbyssBounties get() {
         return instance;
     }
-
 }

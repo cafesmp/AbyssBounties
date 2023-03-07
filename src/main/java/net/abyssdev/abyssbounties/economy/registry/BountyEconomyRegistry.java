@@ -38,5 +38,4 @@ public final class BountyEconomyRegistry implements Registry<String, BountyEcono
     public Map<String, BountyEconomy> getRegistry() {
         return this.currencies;
     }
-
 }

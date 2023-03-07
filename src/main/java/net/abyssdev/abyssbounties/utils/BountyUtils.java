@@ -103,5 +103,4 @@ public final class BountyUtils {
         itemLore = Color.parse(plugin.getItemConfig().getStringList("lore"));
         currencyFormat = Color.parse(plugin.getItemConfig().getString("currency-format"));
     }
-
 }

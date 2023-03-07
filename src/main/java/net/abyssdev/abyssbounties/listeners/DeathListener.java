@@ -46,5 +46,4 @@ public final class DeathListener extends AbyssListener<AbyssBounties> {
                 .addPlaceholder("%victim%", player.getName())
                 .addPlaceholder("%killer%", killer.getName()));
     }
-
 }

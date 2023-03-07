@@ -46,5 +46,4 @@ public final class JoinListener extends AbyssListener<AbyssBounties> {
             )).forEach(player::sendMessage), 60L);
         }
     }
-
 }

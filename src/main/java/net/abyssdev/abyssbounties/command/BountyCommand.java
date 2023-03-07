@@ -47,5 +47,4 @@ public final class BountyCommand extends Command<Player> {
 
         this.plugin.getMessageCache().sendMessage(player, "messages.admin-help");
     }
-
 }

@@ -84,5 +84,4 @@ public final class AddCommand extends SubCommand {
         BountyUtils.addCurrency(player.getUniqueId(), bounty, economy.getName(), context.asDouble(1));
 
     }
-
 }

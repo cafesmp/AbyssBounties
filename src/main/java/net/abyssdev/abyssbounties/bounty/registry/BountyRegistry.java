@@ -19,5 +19,4 @@ public final class BountyRegistry implements Registry<UUID, Bounty> {
     public Map<UUID, Bounty> getRegistry() {
         return this.bounties;
     }
-
 }

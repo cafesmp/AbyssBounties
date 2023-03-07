@@ -30,5 +30,4 @@ public final class BountyEconomy {
 
         this.economy = DefaultEconomyRegistry.get().getEconomy(name);
     }
-
 }
