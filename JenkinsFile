@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "cp -r /home/Infrastructure/Obfuscation/Dependencies/* ."
                 sh "sudo JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 mvn clean install"
-                sh "/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar Obfuscation/qprotect.jar --input target/AbyssBounties-PRE.jar --output AbyssBounties.jar --config Obfuscation/config.yml"
+                sh "/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /home/Infrastructure/Obfuscation/qprotect.jar --input target/AbyssBounties-PRE.jar --output AbyssBounties.jar --config Obfuscation/config.yml"
             }
             post {
                 success {
@@ -39,7 +39,7 @@ pipeline {
                 def seconds = buildTime % 60
 
                 def buildTimeFormatted = ""
-                if (minutes => 1) {
+                if (minutes >= 1) {
                     buildTimeFormatted += "${minutes}m "
                 }
                 buildTimeFormatted += "${seconds}s"
