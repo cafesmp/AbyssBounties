@@ -75,7 +75,7 @@ public final class RemoveCommand extends SubCommand {
 
                     final double value = bounty.getRewards().get(currency);
 
-                    this.plugin.getEconomyRegistry().get(currency).get().getEconomy().addBalance(player, value);
+                    this.plugin.getEconomyRegistry().get(currency).get().getEconomy().addBalance(player, amount);
 
                     if (value - amount <= 0) {
                         bounty.getRewards().remove(currency);
