@@ -13,6 +13,7 @@ settings:
     - "jfr.jar"
     - "spigot-1.17.1.jar"
     - "AbyssLib.jar"
+    - "eclipse-collections-11.1.0.jar"
   exclusions:
     - "Global: com/"
     - "Global: edu/"
