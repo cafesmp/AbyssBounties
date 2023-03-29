@@ -4,16 +4,7 @@ file:
 settings:
   dictionary: LOOKALIKE_IL
   dependencies:
-    - "resources.jar"
-    - "rt.jar"
-    - "sunrsasign.jar"
-    - "jsse.jar"
-    - "jce.jar"
-    - "charsets.jar"
-    - "jfr.jar"
-    - "spigot-1.17.1.jar"
-    - "AbyssLib.jar"
-    - "eclipse-collections-11.1.0.jar"
+    - "/home/Infrastructure/Obfuscation/Dependencies/"
   exclusions:
     - "Global: com/"
     - "Global: edu/"
