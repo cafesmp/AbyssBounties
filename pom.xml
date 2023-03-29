@@ -89,7 +89,7 @@
             <artifactId>AbyssLib</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/AbyssLib.jar</systemPath>
+            <systemPath>${project.basedir}/AbyssLib.jar</systemPath>
         </dependency>
 
     </dependencies>
