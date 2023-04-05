@@ -4,7 +4,14 @@ file:
 settings:
   dictionary: LOOKALIKE_IL
   dependencies:
-    - "/home/Infrastructure/Obfuscation/Dependencies/"
+    - "spigot-1.17.1.jar"
+    - "rt.jar"
+    - "resources.jar"
+    - "jsse.jar"
+    - "jce.jar"
+    - "charsets.jar"
+    - "jfr.jar"
+    - "AbyssLib-PRE.jar"
   exclusions:
     - "Global: com/"
     - "Global: edu/"
@@ -15,6 +22,9 @@ settings:
     - "Global: org/"
     - "Global: uk/"
     - "Global: co/"
+    - "Global: jdk/"
+    - "Global: sun/"
+    - "Global: java/"
   inclusions: []
 transformers:
   nopspamtransformer:
@@ -24,7 +34,7 @@ transformers:
   string call optimizer:
     enabled: false
   anti debugger:
-    enabled: true
+    enabled: false
   resource encryption:
     enabled: true
   field reference encryption:
@@ -65,7 +75,7 @@ transformers:
     enabled: true
     settings: Mutate
   crasher:
-    enabled: true
+    enabled: false
   shuffle members:
     enabled: false
   access transformer:
